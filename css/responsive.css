@@ -1,0 +1,29 @@
+@media (min-width: 480px) {
+    p {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 39rem) {
+    #footer {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 39rem) {
+    #footer .footer-left {
+        align-self: flex-start;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 39rem) {
+    #footer .footer-right {
+        align-self: flex-end;
+    }
+}

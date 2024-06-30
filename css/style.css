@@ -1,0 +1,104 @@
+/*Globals*/
+
+.title, .subtitle {
+    letter-spacing: .02em;
+}
+
+.title {
+    color: #2bbc8a;
+    margin-top: 3rem;
+}
+
+.subtitle {
+    color: #666;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+i.hoverable {
+    color: #c9cacc;
+}
+
+i.hoverable:hover {
+    color: #d480aa;
+}
+
+.icon {
+    color: #c9cacc;
+}
+
+/*site-header*/
+.site-header .title {
+    font-size: 2em;
+    letter-spacing: .05em;
+}
+
+.site-header .subtitle {
+    font-size: 1.4em;
+}
+
+/*personal info*/
+.cols {
+    display: flex;
+}
+
+.cols .column {
+    padding: 10px;
+    flex: 33%;
+}
+
+.column-title {
+    color: #eee;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+}
+
+/*projects*/
+
+.project-item {
+    display: flex;
+}
+
+.project-item .left {
+    margin-left: auto;
+    margin-top: 8px;
+    float: left;
+}
+
+.project-item .left img {
+    padding: 10px;
+}
+
+.project-item .right {
+    flex: 1;
+    padding-left: 8px;
+    float: right;
+}
+
+.project-item .right h3 {
+    margin-top: 8px;
+    color: #eee;
+    font-weight: 700;
+
+    display: block;
+    font-size: 1rem;
+    letter-spacing: normal;
+    margin-bottom: .5rem;
+
+    position: relative;
+    text-transform: none;
+}
+
+
+.project-tags .tag::before {
+    content: " #";
+}
+
+.project-tags .tag:not(:last-of-type)::after {
+    content: ", ";
+}

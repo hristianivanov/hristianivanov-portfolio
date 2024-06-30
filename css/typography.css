@@ -1,0 +1,24 @@
+html {
+    font: 14px/1.725 Oxygen, monospace;
+    color: #c9cacc;
+}
+
+body, table, input, textarea, button {
+    font: inherit;
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 72rem;
+    padding: 4rem 2rem;
+    background: #1d1f21;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+p {
+    margin: 1em 0;
+    -moz-hyphens: auto;
+    overflow-wrap: break-word;
+}
