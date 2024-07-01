@@ -1,0 +1,91 @@
+#clients {
+    text-align: center;
+    background-color: #333;
+    padding: 40px 0;
+}
+
+#clients h2 {
+    color: white;
+    margin-bottom: 50px;
+}
+
+.splide {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.splide__track {
+    margin: 20px 0;
+    display: flex;
+    gap: 200px;
+}
+
+.splide__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+.splide__slide {
+    flex: 0 0 20%;
+}
+
+.splide__slide a {
+    display: block;
+    width: 90%;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.splide .splide__pagination {
+    position: relative;
+    margin-top: 2em;
+}
+
+.splide .splide__pagination li {
+    width: 25px;
+}
+
+.splide .splide__pagination button {
+    /*background-color: orange;*/
+}
+
+.splide .splide__pagination__page.is-active {
+    /*background-color: darkorange;*/
+}
+
+.client_logos {
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.client_logos ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.client_logos ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+.client_logos ul a {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.page_section.team {
+    padding: 60px 0;
+}
+
+.page_section.team h6 {
+    margin-bottom: 40px;
+}

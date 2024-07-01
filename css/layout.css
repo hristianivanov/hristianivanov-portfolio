@@ -1,10 +1,9 @@
 /*!*---------------BASE STYLES---------------*!*/
-/*.site-container {*/
-/*    display: flex;*/
-/*    flex-flow: column;*/
-/*    align-content: center;*/
-/*    height: 100vh;*/
-/*}*/
+.site-wrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
 /*.site-container.admin {*/
 /*    font1-size: 14px;*/
