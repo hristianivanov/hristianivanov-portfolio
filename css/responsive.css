@@ -27,3 +27,43 @@
         align-self: flex-end;
     }
 }
+
+@media (max-width: 600px) {
+    html {
+        font: 14px/1.725 Oxygen, monospace;
+    }
+
+    .site-wrapper {
+        max-width: 28rem;
+    }
+
+    .cols {
+        flex-direction: column;
+    }
+
+    .project-item {
+        flex-direction: column;
+        margin: 2.5em 0;
+    }
+
+    .project-item .left {
+        margin: 0;
+        order: 2;
+    }
+
+    .project-item .left img {
+        margin: 0 auto;
+    }
+
+    .project-item .right h3 {
+        font-size: 1.2rem;
+    }
+
+    .splide__slide {
+        flex-basis: 250px;
+    }
+
+    .inline {
+        white-space: nowrap;
+    }
+}
