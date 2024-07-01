@@ -1,34 +1,13 @@
-#clients {
-    text-align: center;
-    background-color: #333;
-    padding: 40px 0;
-}
-
-#clients h2 {
-    color: white;
-    margin-bottom: 50px;
-}
-
 .splide {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.splide__track {
-    margin: 20px 0;
-    display: flex;
-    gap: 200px;
+    padding: 2em 0;
 }
 
 .splide__list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
     list-style: none;
 }
 
 .splide__slide {
-    flex: 0 0 20%;
+    flex: 0 0 12%;
 }
 
 .splide__slide a {
@@ -39,8 +18,13 @@
 .splide__slide img {
     width: 100%;
     height: auto;
-    border-radius: 1rem;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 0.5em;
+    filter: grayscale(50%);
+    transition: transform 0.3s ease-in-out, filter 0.2s ease-in;
+}
+
+.splide__slide img:hover {
+    filter: grayscale(0);
 }
 
 .splide .splide__pagination {
@@ -53,39 +37,17 @@
 }
 
 .splide .splide__pagination button {
-    /*background-color: orange;*/
+    background: #2bbc8a;
 }
 
 .splide .splide__pagination__page.is-active {
-    /*background-color: darkorange;*/
+    background: #1f8662;
 }
 
-.client_logos {
-    padding: 60px 0;
-    margin-top: 60px;
+.splide__arrow {
+    background: #2bbc8a;
 }
 
-.client_logos ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.client_logos ul li {
-    display: inline;
-    margin: 0 25px;
-}
-
-.client_logos ul a {
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.page_section.team {
-    padding: 60px 0;
-}
-
-.page_section.team h6 {
-    margin-bottom: 40px;
+.splide__arrow svg {
+    fill: #fff;
 }

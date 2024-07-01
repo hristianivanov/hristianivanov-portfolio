@@ -1,5 +1,5 @@
 html {
-    font: 14px/1.725 Oxygen, monospace;
+    font: 16px/1.725 Oxygen, monospace;
     color: #c9cacc;
 }
 
@@ -9,7 +9,7 @@ body, table, input, textarea, button {
 
 body {
     height: 100%;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
     background: #1d1f21;
     display: grid;
     grid-template-rows: auto 1fr auto;

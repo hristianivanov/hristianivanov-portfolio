@@ -31,6 +31,19 @@ i.hoverable:hover {
     color: #c9cacc;
 }
 
+.underline {
+    background-image: linear-gradient(transparent,transparent 5px,#c9cacc 0,#c9cacc);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 100% 6px;
+    color: #c9cacc;
+    text-decoration: none;
+}
+
+.underline:hover {
+    background-image: linear-gradient(transparent,transparent 4px,#d480aa 0,#d480aa);
+}
+
 /*site-header*/
 .site-header .title {
     font-size: 2em;
@@ -71,6 +84,10 @@ i.hoverable:hover {
 }
 
 .project-item .left img {
+    display: block;
+    width: 300px;
+    height: auto;
+    aspect-ratio: 16/9;
     padding: 10px;
 }
 
@@ -101,4 +118,14 @@ i.hoverable:hover {
 
 .project-tags .tag:not(:last-of-type)::after {
     content: ", ";
+}
+
+.inline {
+    background: #212326;
+    border: 1px dotted #666;
+    border-radius: 2px;
+    font-size: 0.9em;
+    line-height: 22px;
+    overflow-x: auto;
+    padding: 0 5px;
 }
