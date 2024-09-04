@@ -20,3 +20,8 @@ p {
     -moz-hyphens: auto;
     overflow-wrap: break-word;
 }
+
+a {
+    text-decoration: none;
+    color: unset;
+}
