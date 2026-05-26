@@ -7,7 +7,7 @@ const LINK_URLS = {
     index: 'index.html',
     contact: 'contact.html',
     subscribe: '#',
-    tipJar: '#',
+    tipJar: 'https://revolut.me/hristipp1j',
     itJobFinder: 'https://github.com/hristianivanov/ITJob-Finder-ASP.NET-MVC',
     softUniCourses: 'https://github.com/hristianivanov/SoftUni-Courses',
 };
