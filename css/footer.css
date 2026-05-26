@@ -21,7 +21,8 @@
     padding: 0;
 }
 
-#footer li, #footer li a {
+#footer li,
+#footer li a {
     margin-right: 15px;
 }
 
@@ -35,4 +36,9 @@
     background-image: none;
     color: #666;
     text-decoration: underline;
+}
+
+#footer a:hover {
+    color: #2bbc8a;
+    translate: (0, -0.25rem);
 }
