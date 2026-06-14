@@ -1,6 +1,7 @@
 export const projects = [
     {
         title: "Wild Rift Counter Lab",
+        slug: "wild-rift-counter-lab",
         summary:
             "A full-stack application that analyzes champion matchups and recommends picks based on configurable scoring rules.",
         highlights: [
@@ -23,6 +24,7 @@ export const projects = [
     },
     {
         title: "DevHunter",
+        slug: "devhunter",
         summary:
             "A recruitment platform built with ASP.NET Core MVC that allows candidates, companies, and administrators to manage the hiring process through dedicated workflows.",
         highlights: [
@@ -38,6 +40,7 @@ export const projects = [
     },
     {
         title: "Car Rental System",
+        slug: "car-rental-system",
         summary:
             "A car rental application where users can browse available vehicles, create reservations, and manage their bookings.",
         highlights: [

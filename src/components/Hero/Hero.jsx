@@ -1,5 +1,6 @@
 import { ExternalLink, FileText, Github } from "lucide-react";
 import { links } from "../../data/links";
+import { analyticsEvents, trackEvent } from "../../utils/analytics";
 import ActionLink from "../ActionLink/ActionLink";
 
 export default function Hero() {
@@ -19,7 +20,14 @@ export default function Hero() {
                 <ActionLink href="#projects" className="primary">
                     View projects <ExternalLink size={17} />
                 </ActionLink>
-                <ActionLink href={links.cv} target="_blank" rel="noreferrer">
+                <ActionLink
+                    href={links.cv}
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() =>
+                        trackEvent(analyticsEvents.viewCv, { url: links.cv })
+                    }
+                >
                     View CV <FileText size={17} />
                 </ActionLink>
                 <ActionLink href={links.github} target="_blank" rel="noreferrer">

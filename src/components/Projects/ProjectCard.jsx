@@ -1,4 +1,5 @@
 import { ExternalLink, Github } from "lucide-react";
+import { analyticsEvents, trackEvent } from "../../utils/analytics";
 import ActionLink from "../ActionLink/ActionLink";
 
 export default function ProjectCard({ project }) {
@@ -44,6 +45,13 @@ export default function ProjectCard({ project }) {
                             target="_blank"
                             rel="noreferrer"
                             className="primary"
+                            onClick={() =>
+                                trackEvent(analyticsEvents.liveDemo, {
+                                    projectTitle: project.title,
+                                    projectSlug: project.slug,
+                                    url: project.demo,
+                                })
+                            }
                         >
                             Live showcase <ExternalLink size={16} />
                         </ActionLink>
@@ -52,6 +60,13 @@ export default function ProjectCard({ project }) {
                         href={project.source}
                         target="_blank"
                         rel="noreferrer"
+                        onClick={() =>
+                            trackEvent(analyticsEvents.sourceCode, {
+                                projectTitle: project.title,
+                                projectSlug: project.slug,
+                                url: project.source,
+                            })
+                        }
                     >
                         Source code <Github size={16} />
                     </ActionLink>

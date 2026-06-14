@@ -341,6 +341,14 @@ h3 {
     min-height: 44px;
 }
 
+.privacy-note {
+    max-width: 34rem;
+    margin: 0.35rem 0 0;
+    color: #6f7477;
+    font-size: 0.7rem;
+    line-height: 1.45;
+}
+
 @media (max-width: 48rem) {
     .site-header {
         padding-block: 2rem 0.75rem;
