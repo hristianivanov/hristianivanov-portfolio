@@ -20,6 +20,8 @@ export const projects = [
         imageAlt: "Wild Rift Counter Lab draft assistant",
         visualLabel: "WILD RIFT / COUNTER LAB",
         source: "https://github.com/hristianivanov/WildRift-CounterLab",
+        githubOwner: "hristianivanov",
+        githubRepo: "WildRift-CounterLab",
         demo: "https://wild-rift-app-mocha.vercel.app",
     },
     {
@@ -36,6 +38,8 @@ export const projects = [
         image: "/imgs/projects/DevHunter-thumbnail.png",
         imageAlt: "DevHunter recruitment platform homepage",
         source: "https://github.com/hristianivanov/ITJob-Finder-ASP.NET-MVC",
+        githubOwner: "hristianivanov",
+        githubRepo: "ITJob-Finder-ASP.NET-MVC",
         demo: "https://devhuntershowcase.vercel.app/",
     },
     {
@@ -52,5 +56,7 @@ export const projects = [
         image: "/imgs/projects/CarRentalSystem-thumbnail.png",
         imageAlt: "Car Rental System web application",
         source: "https://github.com/hristianivanov/Car-Rental-Web-App",
+        githubOwner: "hristianivanov",
+        githubRepo: "Car-Rental-Web-App",
     },
 ];

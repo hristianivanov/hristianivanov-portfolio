@@ -1,8 +1,14 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
+import useGithubMetadata from "../../hooks/useGithubMetadata";
 import { analyticsEvents, trackEvent } from "../../utils/analytics";
 import ActionLink from "../ActionLink/ActionLink";
 
 export default function ProjectCard({ project }) {
+    const githubMetadata = useGithubMetadata(
+        project.githubOwner,
+        project.githubRepo,
+    );
+
     return (
         <article className="project-card">
             {project.image ? (
@@ -38,6 +44,25 @@ export default function ProjectCard({ project }) {
                         <li key={tag}>{tag}</li>
                     ))}
                 </ul>
+                {githubMetadata && (
+                    <div
+                        className="project-metadata"
+                        aria-label={`${project.title} GitHub metadata`}
+                    >
+                        {githubMetadata.stars !== null && (
+                            <span>
+                                <Star size={13} aria-hidden="true" />
+                                {githubMetadata.stars}
+                            </span>
+                        )}
+                        {githubMetadata.language && (
+                            <span>{githubMetadata.language}</span>
+                        )}
+                        {githubMetadata.updated && (
+                            <span>Updated {githubMetadata.updated}</span>
+                        )}
+                    </div>
+                )}
                 <div className="project-actions">
                     {project.demo && (
                         <ActionLink

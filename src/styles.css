@@ -282,6 +282,28 @@ h3 {
     overflow-wrap: anywhere;
 }
 
+.project-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.55rem;
+    margin: -0.15rem 0 0.75rem;
+    color: #858b8e;
+    font-size: 0.7rem;
+}
+
+.project-metadata span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.project-metadata span:not(:last-child)::after {
+    margin-left: 0.35rem;
+    color: #555b5e;
+    content: "·";
+}
+
 .certificate-carousel {
     overflow: hidden;
     padding-block: 0.5rem;
