@@ -10,11 +10,11 @@ export const projects = [
     {
         title: "Wild Rift Counter Lab",
         summary:
-            "A full-stack draft assistant that ranks champion recommendations using deterministic scoring, then optionally uses AI to explain the results.",
+            "A full-stack application that analyzes champion matchups and recommends picks based on configurable scoring rules.",
         highlights: [
-            "Clean Architecture ASP.NET Core API",
-            "Transparent multi-category recommendation engine",
-            "React and TypeScript frontend with PostgreSQL",
+            "ASP.NET Core API following Clean Architecture principles",
+            "Recommendation engine combining matchup and team composition factors",
+            "React and TypeScript frontend backed by PostgreSQL",
         ],
         tags: [
             "ASP.NET Core Web API",
@@ -32,11 +32,11 @@ export const projects = [
     {
         title: "DevHunter",
         summary:
-            "A role-based IT recruitment platform with candidate, company, and administrator workflows.",
+            "A recruitment platform built with ASP.NET Core MVC that allows candidates, companies, and administrators to manage the hiring process through dedicated workflows.",
         highlights: [
-            "177 automated tests",
-            "Role and ownership authorization",
-            "GitHub Actions CI",
+            "Role-based authorization with separate user experiences",
+            "Automated testing covering core business logic",
+            "Continuous integration with GitHub Actions",
         ],
         tags: [".NET 8", "ASP.NET Core MVC", "EF Core", "SQL Server", "NUnit"],
         image: "/imgs/projects/DevHunter-thumbnail.png",
@@ -47,11 +47,11 @@ export const projects = [
     {
         title: "Car Rental System",
         summary:
-            "An ASP.NET Core MVC application for browsing vehicles, creating reservations, and managing rental data.",
+            "A car rental application where users can browse available vehicles, create reservations, and manage their bookings.",
         highlights: [
-            "User and administrator workflows",
-            "Reservation management",
-            "Responsive interface",
+            "ASP.NET Core MVC application with Entity Framework Core",
+            "Separate user and administrator workflows",
+            "Vehicle, booking, and reservation management",
         ],
         tags: ["C#", "ASP.NET Core MVC", "Entity Framework Core", "SQL Server"],
         image: "/imgs/projects/CarRentalSystem-thumbnail.png",

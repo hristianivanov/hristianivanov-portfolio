@@ -20,12 +20,13 @@ function Header() {
         <header className="site-header site-wrapper">
             <p className="eyebrow">Portfolio</p>
             <h1>Hristian Ivanov</h1>
-            <p className="subtitle">Junior .NET Developer</p>
+            <p className="subtitle">Junior Software Developer</p>
             <p className="intro">
-                I build tested ASP.NET Core applications with C#, Entity
-                Framework Core, and SQL Server. My flagship project, DevHunter,
-                includes role-based workflows, security controls, GitHub
-                Actions CI, and 177 automated tests.
+                I build web applications with ASP.NET Core, C#, Entity
+                Framework Core, SQL Server, React, and TypeScript. My focus is
+                on building maintainable applications, solving real problems
+                through projects, and continuing to grow as a full-stack
+                developer.
             </p>
             <div className="actions">
                 <ActionLink href="#projects" className="primary">
@@ -47,16 +48,22 @@ function About() {
         <section className="site-wrapper section" id="about">
             <h2>About</h2>
             <p>
-                I am a junior .NET developer based in Bulgaria, seeking my first
-                professional software-development role. I enjoy turning
-                requirements into maintainable features and strengthening
-                projects through testing, authorization, CI, and clear
-                documentation.
+                I am a junior software developer from Bulgaria with a strong
+                interest in web development and the .NET ecosystem.
             </p>
             <p>
-                I am especially interested in backend development, scalable
-                systems, cloud-native applications, and learning through code
-                review.
+                Since 2019, I have been learning and building projects with
+                ASP.NET Core, databases, and modern web technologies. Through
+                personal projects, I have worked on authentication, role-based
+                access, testing, database design, CI/CD, and full-stack
+                application development.
+            </p>
+            <p>
+                I enjoy both backend and frontend development, with a stronger
+                interest in backend architecture and application design. My
+                goal is to keep improving through real-world experience,
+                contribute to meaningful products, and grow into a well-rounded
+                full-stack developer.
             </p>
         </section>
     );
@@ -144,8 +151,7 @@ function Projects() {
         <section className="site-wrapper section" id="projects">
             <h2>Featured Projects</h2>
             <p>
-                Selected .NET projects demonstrating application design,
-                testing, security, and delivery.
+                Personal projects built with .NET and modern web technologies.
             </p>
             <div className="project-list">
                 {projects.map((project) => (
