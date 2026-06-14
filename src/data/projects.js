@@ -1,11 +1,3 @@
-export const links = {
-    github: "https://github.com/hristianivanov",
-    linkedin: "https://www.linkedin.com/in/hristian-ivanov",
-    email: "mailto:hristianfancha@gmail.com",
-    cv: "/cv/hristian_ivanov_cv.pdf",
-    softUni: "https://softuni.bg/",
-};
-
 export const projects = [
     {
         title: "Wild Rift Counter Lab",
@@ -58,35 +50,4 @@ export const projects = [
         imageAlt: "Car Rental System web application",
         source: "https://github.com/hristianivanov/Car-Rental-Web-App",
     },
-];
-
-export const skillGroups = [
-    {
-        title: "Backend",
-        skills: ["C#", ".NET 8", "ASP.NET Core MVC", "ASP.NET Core Identity"],
-    },
-    {
-        title: "Data",
-        skills: ["Entity Framework Core", "SQL Server", "LINQ"],
-    },
-    {
-        title: "Quality & Delivery",
-        skills: ["NUnit", "Moq", "GitHub Actions", "Git", "CI/CD"],
-    },
-];
-
-export const certificates = [
-    "Programming Basics - November 2021 - Certificate.jpeg",
-    "Programming Fundamentals with Csharp - May 2022 - Certificate.jpeg",
-    "Csharp Advanced - September 2022 - Certificate.jpeg",
-    "Csharp OOP - October 2022 - Certificate.jpeg",
-    "MS SQL - January 2023 - Certificate.jpeg",
-    "Entity Framework Core - February 2023 - Certificate.jpeg",
-    "ASP.NET Fundamentals - May 2023 - Certificate.jpeg",
-    "ASP.NET Advanced - June 2023 - Certificate.jpeg",
-    "HTML & CSS - September 2023 - Certificate.jpeg",
-    "JS Front-End - October 2023 - Certificate.jpeg",
-    "Containers and Cloud - January 2024 - Certificate.jpeg",
-    "Software Engineering and DevOps - February 2024 - Certificate.jpeg",
-    "Diploma for Csharp Web Developer.jpeg",
 ];
