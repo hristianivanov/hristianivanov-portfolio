@@ -8,7 +8,12 @@ export const analyticsEvents = {
 };
 
 export function initAnalytics() {
-    if (!import.meta.env.PROD || !clarityProjectId || typeof window === "undefined") {
+    if (import.meta.env.DEV) {
+        console.info("[Analytics] Clarity initialization skipped in development");
+        return;
+    }
+
+    if (!clarityProjectId || typeof window === "undefined") {
         return;
     }
 
@@ -29,8 +34,12 @@ export function initAnalytics() {
 }
 
 export function trackEvent(eventName, payload = {}) {
+    if (import.meta.env.DEV) {
+        console.info(`[Analytics] Tracking event: ${eventName}`, payload);
+        return;
+    }
+
     if (
-        !import.meta.env.PROD ||
         typeof window === "undefined" ||
         typeof window.clarity !== "function"
     ) {
