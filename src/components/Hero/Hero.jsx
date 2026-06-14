@@ -1,4 +1,4 @@
-import { Download, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, FileText, Github } from "lucide-react";
 import { links } from "../../data/links";
 import ActionLink from "../ActionLink/ActionLink";
 
@@ -20,7 +20,7 @@ export default function Hero() {
                     View projects <ExternalLink size={17} />
                 </ActionLink>
                 <ActionLink href={links.cv} target="_blank" rel="noreferrer">
-                    Download CV <Download size={17} />
+                    View CV <FileText size={17} />
                 </ActionLink>
                 <ActionLink href={links.github} target="_blank" rel="noreferrer">
                     GitHub <Github size={17} />
