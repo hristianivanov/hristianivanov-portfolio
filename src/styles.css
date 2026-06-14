@@ -21,6 +21,27 @@ body {
     min-width: 320px;
 }
 
+html,
+body,
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+#root,
+main,
+.section,
+.site-wrapper,
+.project-card,
+.project-content {
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
 a {
     color: inherit;
 }
@@ -31,7 +52,8 @@ a:focus-visible {
 }
 
 .site-wrapper {
-    width: min(100% - 2rem, 64rem);
+    width: calc(100% - 2rem);
+    max-width: 64rem;
     margin-inline: auto;
 }
 
@@ -105,6 +127,7 @@ h3 {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    min-height: 44px;
     padding: 0.5rem 0.75rem;
     border: 1px solid #666;
     border-radius: 0.35rem;
@@ -154,6 +177,12 @@ h3 {
     margin: 0;
     padding-left: 1.25rem;
     font-size: 0.9rem;
+}
+
+.skill-card li,
+.highlights li,
+.project-content p {
+    overflow-wrap: anywhere;
 }
 
 .project-list {
@@ -244,11 +273,13 @@ h3 {
 }
 
 .tag-list li {
+    max-width: 100%;
     padding: 0.15rem 0.45rem;
     border: 1px solid #4b4f52;
     border-radius: 999px;
     color: #aeb2b4;
     font-size: 0.7rem;
+    overflow-wrap: anywhere;
 }
 
 .certificate-carousel {
@@ -300,7 +331,14 @@ h3 {
 
 .footer nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+}
+
+.footer a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
 }
 
 @media (max-width: 48rem) {
@@ -311,6 +349,15 @@ h3 {
     .skill-grid,
     .project-card {
         grid-template-columns: 1fr;
+    }
+
+    .actions,
+    .project-actions {
+        align-items: stretch;
+    }
+
+    .action-link {
+        justify-content: center;
     }
 
     .project-card > img,
@@ -325,10 +372,41 @@ h3 {
 
     .certificate-group img {
         width: 12rem;
+        scroll-snap-align: start;
+    }
+
+    .certificate-carousel {
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scroll-snap-type: x proximity;
+        scrollbar-width: thin;
+    }
+
+    .certificate-track {
+        animation: none;
+    }
+
+    .certificate-group[aria-hidden="true"] {
+        display: none;
     }
 
     .footer {
         flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .footer nav {
+        gap: 0.25rem 1rem;
+    }
+}
+
+@media (max-width: 26.875rem) {
+    .actions .action-link {
+        flex: 1 1 10rem;
+    }
+
+    .project-actions .action-link {
+        flex: 1 1 100%;
     }
 }
 
