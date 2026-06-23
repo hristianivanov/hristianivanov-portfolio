@@ -1,15 +1,44 @@
-import { certificates } from "../../data/certificates";
+import { useEffect, useState } from "react";
+import { getCertificates } from "../../data/certificatesApi";
 import { links } from "../../data/links";
 
 export default function Certificates() {
+    const [certificates, setCertificates] = useState([]);
+    const [status, setStatus] = useState("loading");
+
+    useEffect(() => {
+        let isMounted = true;
+
+        async function loadCertificates() {
+            try {
+                const loadedCertificates = await getCertificates();
+
+                if (isMounted) {
+                    setCertificates(loadedCertificates);
+                    setStatus("ready");
+                }
+            } catch {
+                if (isMounted) {
+                    setStatus("error");
+                }
+            }
+        }
+
+        loadCertificates();
+
+        return () => {
+            isMounted = false;
+        };
+    }, []);
+
     const renderCertificates = (copy) =>
         certificates.map((certificate) => (
             <img
-                key={`${copy}-${certificate}`}
-                src={`/imgs/certificates/${certificate}`}
+                key={`${copy}-${certificate.id}`}
+                src={certificate.imageUrl}
                 alt={
                     copy === "primary"
-                        ? certificate.replace(/\.(jpeg|jpg|png)$/i, "")
+                        ? `${certificate.title} certificate from ${certificate.issuer}`
                         : ""
                 }
                 aria-hidden={copy === "duplicate" ? "true" : undefined}
@@ -30,17 +59,27 @@ export default function Certificates() {
                     </a>
                     .
                 </p>
+                {status === "loading" && (
+                    <p className="certificate-status">Loading certificates...</p>
+                )}
+                {status === "error" && (
+                    <p className="certificate-status">
+                        Certificates could not be loaded right now.
+                    </p>
+                )}
             </div>
-            <div className="certificate-carousel" aria-label="Certificates">
-                <div className="certificate-track">
-                    <div className="certificate-group">
-                        {renderCertificates("primary")}
-                    </div>
-                    <div className="certificate-group" aria-hidden="true">
-                        {renderCertificates("duplicate")}
+            {status === "ready" && (
+                <div className="certificate-carousel" aria-label="Certificates">
+                    <div className="certificate-track">
+                        <div className="certificate-group">
+                            {renderCertificates("primary")}
+                        </div>
+                        <div className="certificate-group" aria-hidden="true">
+                            {renderCertificates("duplicate")}
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </section>
     );
 }
