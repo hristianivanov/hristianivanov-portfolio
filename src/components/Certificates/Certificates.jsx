@@ -60,10 +60,10 @@ export default function Certificates() {
                     .
                 </p>
                 {status === "loading" && (
-                    <p className="certificate-status">Loading certificates...</p>
+                    <p className="certificate-status" role="status">Loading certificates...</p>
                 )}
                 {status === "error" && (
-                    <p className="certificate-status">
+                    <p className="certificate-status" role="alert">
                         Certificates could not be loaded right now.
                     </p>
                 )}
