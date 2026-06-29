@@ -308,6 +308,12 @@ h3 {
     content: "·";
 }
 
+.certificate-status {
+    padding: 1rem 0;
+    color: #c9cacc;
+    font-size: 0.95rem;
+}
+
 .certificate-carousel {
     overflow: hidden;
     padding-block: 0.5rem;
