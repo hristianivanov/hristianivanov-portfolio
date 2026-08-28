@@ -13,6 +13,7 @@ export default function Footer() {
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
+                <a href="https://revolut.me/hristipp1j" target="_blank" rel="noreferrer">Tip jar</a>
             </nav>
         </footer>
     );
